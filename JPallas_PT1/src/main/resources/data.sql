@@ -48,8 +48,8 @@ CREATE TABLE messages(
 	sender INT NOT NULL,
 	party INT NOT NULL,
 	PRIMARY KEY (id),
-	CONSTRAINT FK_messages_sender FOREIGN KEY (sender) REFERENCES users(id),
-	CONSTRAINT FK_messages_party FOREIGN KEY (party) REFERENCES parties(id)
+	CONSTRAINT FK_messages_sender FOREIGN KEY (sender) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT FK_messages_party FOREIGN KEY (party) REFERENCES parties(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 INSERT INTO games(title, description, playtime) VALUES ('Deep Rock Galactic', 'A game where you work and mine with your fellow dwarves', 100);
@@ -73,7 +73,6 @@ INSERT INTO users(username, password, email, steam_username) VALUES ('User2', 'i
 INSERT INTO users(username, password, email, steam_username) VALUES ('User3', 'i<3coding123', 'codingjunkie@gmail.com', 'codejunkie');
 INSERT INTO users(username, password, email, steam_username) VALUES ('User4', 'i<3coding123', 'codingjunkie@gmail.com', 'codejunkie');
 INSERT INTO users(username, password, email, steam_username) VALUES ('EsteProyecto', 'SeraDivertido', 'DeVerdad@yahoo.com', 'LFGAPP');
-INSERT INTO users(username, password, email, steam_username) VALUES ('User5', 'i<3coding123', 'codingjunkie@gmail.com', 'codejunkie');
 
 INSERT INTO parties(title, description, game, created_by) VALUES ('We Goin Deep', 'Rock and Stone to the Bone', 1, 5);
 INSERT INTO parties(title, description, game, created_by) VALUES ('Sims and chill', 'Lets talk about our virtual lives!', 5, 4);
