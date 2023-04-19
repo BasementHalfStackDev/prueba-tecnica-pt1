@@ -2,6 +2,8 @@
 Prueba Tecnica EX 1 realizada el 2023-04-19 en el BootCamp de T-Systems.
 
 # API Spring
+![image](https://user-images.githubusercontent.com/89463715/233144790-c8ef6828-d950-4018-9fed-303ae1bf4321.png)
+
 
 Se crea una API para una aplicación LFG donde los usuarios pueden crear e unirse a diferentes grupos de videojuegos para poder chatear entre ellos. Para ello se crean las siguientes entidades y endpoints.
 
