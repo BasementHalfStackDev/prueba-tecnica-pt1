@@ -99,3 +99,15 @@ INSERT INTO party_members(user, party) VALUES (10, 2);
 INSERT INTO messages(content, sender, party) VALUES ('Holas!', 5, 1);
 INSERT INTO messages(content, sender, party) VALUES ('Como va esto?', 5, 1);
 INSERT INTO messages(content, sender, party) VALUES ('Todo bien?', 5, 1);
+INSERT INTO messages(content, sender, party) VALUES ('Si!', 1, 1);
+INSERT INTO messages(content, sender, party) VALUES ('Gracias!', 1, 1);
+
+INSERT INTO messages(content, sender, party) VALUES ('Como va vuestra familia en los sims?', 2, 2);
+INSERT INTO messages(content, sender, party) VALUES ('Mi perro murio :(', 3, 2);
+INSERT INTO messages(content, sender, party) VALUES ('Mi sim ha tenido una hija!', 4, 2);
+INSERT INTO messages(content, sender, party) VALUES ('He sido negligente y los servicios sociales se llevan a mi hijo, oh no', 5, 2);
+INSERT INTO messages(content, sender, party) VALUES ('Vendo Opel Astra en perfectas condiciones excepto el aire acondicionado que-', 10, 2);
+INSERT INTO messages(content, sender, party) VALUES ('Alguien se echa un fortnite?', 6, 2);
+
+INSERT INTO messages(content, sender, party) VALUES ('Hay alguien ahi?', 8, 3);
+INSERT INTO messages(content, sender, party) VALUES ('No.', 9, 3);
