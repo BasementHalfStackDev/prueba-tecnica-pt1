@@ -8,6 +8,8 @@ Se crea una API para una aplicación LFG donde los usuarios pueden crear e unirs
 ## Games
 Se guarda toda la información de los juegos. Endpoints para poder ver todos los juegos o buscar por id, crear, borrar y modificar los juegos actuales.
 ### Endpoints
+####Get
+/api/games - lista todos los juegos
 
 
 
