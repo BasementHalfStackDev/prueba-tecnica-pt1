@@ -10,9 +10,9 @@ Se guarda toda la información de los juegos. Endpoints para poder ver todos los
 ### Endpoints
 **GET**
 
-/api/games - lista todos los juegos
+/api/games - Lista todos los juegos
 
-/api/games/{id} - muestra el juego con x id
+/api/games/{id} - Muestra el juego con x id
 
 **POST**
 
@@ -27,10 +27,85 @@ Se guarda toda la información de los juegos. Endpoints para poder ver todos los
 /api/games{id} - Elimina juego con x id
 
 ## Users
-- Users: Se guarda información de nombre de usuario, contraseña, email, usuario de steam... Endpoints para listar/buscar por id, crear, borrar y modificar usuarios.
+Se guarda información de nombre de usuario, contraseña, email, usuario de steam... Endpoints para listar/buscar por id, crear, borrar y modificar usuarios.
+### Endpoints
+**GET**
 
-- Parties: Se guarda información referente las parties: El titulo, descripcion, juego y el usuario creador. Endpoints para listar todas, listar por id de juego, buscar por id de party, crear, borrar y modificar parties
+/api/users - Lista todos los usuarios
 
-- Messages: Se guarda información referente los mensajes: El texto en si, un timestamp de cuando se envió, usuario que lo envió y la party que pertenece. Endpoints para listar todos, listar por party id, buscar por id de mensaje, crear y borrar mensajes.
+/api/users/{id} - Muestra el usuario con x id
 
-- Party_User: Se guardan las asignaciones de usuarios por party. Endpoints para listar todo, listar usuarios por party, parties por usuario, buscar por id de asignacion, crear y borrar asignacion.
+**POST**
+
+/api/users - Agrega usuario con sus atributos
+
+**PUT**
+
+/api/users/{id} - Modifica usuario con x id
+
+**DELETE**
+
+/api/users{id} - Elimina usuario con x id
+
+## Parties
+Se guarda información referente las parties: El titulo, descripcion, juego y el usuario creador. Endpoints para listar todas, listar por id de juego, buscar por id de party, crear, borrar y modificar parties
+### Endpoints
+**GET**
+
+/api/parties - Lista todos los grupos
+
+/api/parties/{id} - Muestra el grupo con x id
+
+/api/parties/game/{gameId} - Lista todos los grupos dedicados a x juego por id
+
+**POST**
+
+/api/parties - Agrega grupo con sus atributos
+
+**PUT**
+
+/api/parties/{id} - Modifica grupo con x id
+
+**DELETE**
+
+/api/parties{id} - Elimina grupo con x id
+
+##Messages
+Se guarda información referente los mensajes: El texto en si, un timestamp de cuando se envió, usuario que lo envió y la party que pertenece. Endpoints para listar todos, listar por party id, buscar por id de mensaje, crear y borrar mensajes.
+### Endpoints
+**GET**
+
+/api/messages - Lista todos los mensajes
+
+/api/messages/{id} - Muestra el mensaje con x id
+
+/api/messages/party/{partyId} - Lista todos los mensajes enviados a x grupo por id
+
+**POST**
+
+/api/messages - Agrega mensaje con sus atributos
+
+**DELETE**
+
+/api/messages{id} - Elimina mensaje con x id
+
+##Party_User
+Se guardan las asignaciones de usuarios por party. Endpoints para listar todo, listar usuarios por party, parties por usuario, buscar por id de asignacion, crear y borrar asignacion.
+### Endpoints
+**GET**
+
+/api/party_members - Lista todas las asignaciones entre grupo y usuario
+
+/api/party_members/{id} - Muestra la asignación por x id
+
+/api/party_members/user/{userId} - Lista todos los grupos en los que participa el usuario con x id
+
+/api/party_members/party/{partyId} - Lista todos los usuarios que participan en x grupo por id
+
+**POST**
+
+/api/party_members - Agrega asignacion de usuario a grupo
+
+**DELETE**
+
+/api/party_members/{id} - Elimina asignacion con x id
