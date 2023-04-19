@@ -3,7 +3,7 @@ Prueba Tecnica EX 1 realizada el 2023-04-19 en el BootCamp de T-Systems.
 
 # API Spring
 
-Se crea una API para una aplicación LFG donde los usuarios pueden crear e unirse a diferentes parties de videojuegos para poder chatear entre ellos, para ello se crean las siguientes entidades y endpoints.
+Se crea una API para una aplicación LFG donde los usuarios pueden crear e unirse a diferentes grupos de videojuegos para poder chatear entre ellos. Para ello se crean las siguientes entidades y endpoints.
 
 # Requisitos
 La empresa quiere dar un impulso a la manera que tienen los trabajadores de relacionarse, permitiendo que contacten entre ellos creando grupos de interés. 
