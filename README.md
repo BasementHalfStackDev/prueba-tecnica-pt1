@@ -13,4 +13,4 @@ Se crea una API para una aplicación LFG donde los usuarios pueden crear e unirs
 
 - Messages: Se guarda información referente los mensajes: El texto en si, un timestamp de cuando se envió, usuario que lo envió y la party que pertenece. Endpoints para listar todos, listar por party id, buscar por id de mensaje, crear y borrar mensajes.
 
-- Party_User: Se guardan las asignaciones de usuarios por party. Endpoints para listar todo, buscar por id, crear y borrar asignacion.
+- Party_User: Se guardan las asignaciones de usuarios por party. Endpoints para listar todo, listar usuarios por party, parties por usuario, buscar por id de asignacion, crear y borrar asignacion.
