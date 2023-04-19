@@ -55,7 +55,8 @@ public class PartyController {
 	// Put Mappings
 	@PutMapping("/parties/{id}")
 	public Party updateParty(@PathVariable(name = "id") Long id, @RequestBody Party party) {
-		Party selectedParty = new Party(id, party.getTitle(), party.getDescription(), party.getPlaytime());
+		Party selectedParty = new Party(id, party.getTitle(), party.getDescription(), party.getGame(),
+				party.getCreated_by());
 		Party updatedParty = new Party();
 
 		updatedParty = partyService.updateParty(selectedParty);
