@@ -5,6 +5,20 @@ Prueba Tecnica EX 1 realizada el 2023-04-19 en el BootCamp de T-Systems.
 
 Se crea una API para una aplicación LFG donde los usuarios pueden crear e unirse a diferentes parties de videojuegos para poder chatear entre ellos, para ello se crean las siguientes entidades y endpoints.
 
+# Requisitos
+La empresa quiere dar un impulso a la manera que tienen los trabajadores de relacionarse, permitiendo que contacten entre ellos creando grupos de interés. 
+
+Una primera fase de este proyecto es crear una aplicación web LFG, que permita que los  empleados  puedan  contactar  con  otros  compañeros  para formar grupos para jugar a un videojuego, con el objetivo de poder compartir un rato de ocio afterwork. 
+
+Los requisitos funcionales de la aplicación son los siguientes: 
+
+- Los   usuarios  tienen  que  poder  crear  Partídas  (grupos)  para  un determinado videojuego.
+- Los  usuarios  tienen  que  poder  buscar  Partídas  seleccionando  un videojuego
+- Los usuarios pueden entrar y salir de una Party. 
+- Los  usuarios  tienen  que  poder  enviar  mensajes  a  la  Party. Estos mensajes tienen que poder ser editados y borrados por su usuario creador. 
+- Los mensajes que existan en una Party se tienen que visualizar como un chat común. 
+- Los usuarios pueden introducir y modiﬁcar sus datos de perﬁl, por ejemplo, su usuario de Steam. 
+
 ## Games
 Se guarda toda la información de los juegos. Endpoints para poder ver todos los juegos o buscar por id, crear, borrar y modificar los juegos actuales.
 ### Endpoints
