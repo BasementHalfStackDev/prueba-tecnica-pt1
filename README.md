@@ -5,9 +5,11 @@ Prueba Tecnica EX 1 realizada el 2023-04-19 en el BootCamp de T-Systems.
 
 Se crea una API para una aplicación LFG donde los usuarios pueden crear e unirse a diferentes parties de videojuegos para poder chatear entre ellos, para ello se crean las siguientes entidades y endpoints.
 
-- Games: Se guarda toda la información de los juegos. Endpoints para poder ver todos los juegos o buscar por id, crear, borrar y modificar los juegos actuales.
+## Games
+Se guarda toda la información de los juegos. Endpoints para poder ver todos los juegos o buscar por id, crear, borrar y modificar los juegos actuales.
+### Endpoints
 
-## Endpoints
+
 
 
 - Users: Se guarda información de nombre de usuario, contraseña, email, usuario de steam... Endpoints para listar/buscar por id, crear, borrar y modificar usuarios.
