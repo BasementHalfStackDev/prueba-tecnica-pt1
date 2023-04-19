@@ -40,6 +40,16 @@ public class Party_MemberController {
 		return party_MemberxID;
 	}
 
+	@GetMapping("/party_members/user/{userId}")
+	public List<Party_Member> listPartiesByUserId(@PathVariable(name = "userId") Long userId) {
+		return party_MemberService.listPartiesByUserId(userId);
+	}
+
+	@GetMapping("/party_members/party/{partyId}")
+	public List<Party_Member> listUsersByPartyId(@PathVariable(name = "partyId") Long partyId) {
+		return party_MemberService.listUsersByPartyId(partyId);
+	}
+
 	// Post Mappings
 	@PostMapping("/party_members")
 	public Party_Member saveParty_Member(@RequestBody Party_Member party_Member) {

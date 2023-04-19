@@ -23,6 +23,14 @@ public class Party_MemberService {
 		return party_memberDAO.findAll();
 	}
 
+	public List<Party_Member> listPartiesByUserId(Long userId) {
+		return party_memberDAO.findPartiesByUserId(userId);
+	}
+
+	public List<Party_Member> listUsersByPartyId(Long partyId) {
+		return party_memberDAO.findUsersByPartyId(partyId);
+	}
+
 	public Party_Member saveParty_Member(Party_Member party_member) {
 		return party_memberDAO.save(party_member);
 	}
