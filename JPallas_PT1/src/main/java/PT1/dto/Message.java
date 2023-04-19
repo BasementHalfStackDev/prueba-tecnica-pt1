@@ -42,11 +42,13 @@ public class Message {
 
 	// Constructors
 	public Message() {
+		this.time_sent = LocalDateTime.now();
 	}
 
 	public Message(Long id, String content, User sender, Party party) {
 		this.id = id;
 		this.content = content;
+		this.time_sent = LocalDateTime.now();
 		this.sender = sender;
 		this.party = party;
 	}
