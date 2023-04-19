@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -45,16 +44,6 @@ public class Party_MemberController {
 	@PostMapping("/party_members")
 	public Party_Member saveParty_Member(@RequestBody Party_Member party_Member) {
 		return party_MemberService.saveParty_Member(party_Member);
-	}
-
-	// Put Mappings
-	@PutMapping("/party_members/{id}")
-	public Party_Member updateParty_Member(@PathVariable(name = "id") Long id, @RequestBody Party_Member party_Member) {
-		Party_Member selectedParty_Member = new Party_Member(id, party_Member.getUser(), party_Member.getParty());
-		Party_Member updatedParty_Member = new Party_Member();
-
-		updatedParty_Member = party_MemberService.updateParty_Member(selectedParty_Member);
-		return updatedParty_Member;
 	}
 
 	// Delete Mappings

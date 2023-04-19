@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import PT1.dao.Party_MemberDAO;
 import PT1.dto.Party_Member;
 
-
 @Service // Assign Service
 public class Party_MemberService {
 
@@ -30,10 +29,6 @@ public class Party_MemberService {
 
 	public Party_Member party_memberById(Long id) {
 		return party_memberDAO.findById(id).get();
-	}
-
-	public Party_Member updateParty_Member(Party_Member party_member) {
-		return party_memberDAO.save(party_member);
 	}
 
 	public void deleteParty_Member(Long id) {
