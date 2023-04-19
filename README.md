@@ -70,7 +70,7 @@ Se guarda información referente las parties: El titulo, descripcion, juego y el
 
 /api/parties{id} - Elimina grupo con x id
 
-##Messages
+## Messages
 Se guarda información referente los mensajes: El texto en si, un timestamp de cuando se envió, usuario que lo envió y la party que pertenece. Endpoints para listar todos, listar por party id, buscar por id de mensaje, crear y borrar mensajes.
 ### Endpoints
 **GET**
@@ -89,7 +89,7 @@ Se guarda información referente los mensajes: El texto en si, un timestamp de c
 
 /api/messages{id} - Elimina mensaje con x id
 
-##Party_User
+## Party_User
 Se guardan las asignaciones de usuarios por party. Endpoints para listar todo, listar usuarios por party, parties por usuario, buscar por id de asignacion, crear y borrar asignacion.
 ### Endpoints
 **GET**
