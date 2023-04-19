@@ -23,6 +23,10 @@ public class MessageService {
 		return messageDAO.findAll();
 	}
 
+	public List<Message> listMessagesByPartyId(Long partyId) {
+		return messageDAO.findMessagesByPartyId(partyId);
+	}
+
 	public Message saveMessage(Message message) {
 		return messageDAO.save(message);
 	}

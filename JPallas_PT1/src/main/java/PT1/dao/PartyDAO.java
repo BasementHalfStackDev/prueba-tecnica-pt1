@@ -11,6 +11,6 @@ import PT1.dto.Party;
 
 public interface PartyDAO extends JpaRepository<Party, Long> {
 
-	public List<Party> findPartiesByGameTitle(String game);
+	public List<Party> findPartiesByGameId(Long gameId);
 
 }

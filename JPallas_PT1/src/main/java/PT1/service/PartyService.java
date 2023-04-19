@@ -23,8 +23,8 @@ public class PartyService {
 		return partyDAO.findAll();
 	}
 
-	public List<Party> listPartiesByGameTitle(String game) {
-		return partyDAO.findPartiesByGameTitle(game);
+	public List<Party> listPartiesByGameId(Long gameId) {
+		return partyDAO.findPartiesByGameId(gameId);
 	}
 
 	public Party saveParty(Party party) {

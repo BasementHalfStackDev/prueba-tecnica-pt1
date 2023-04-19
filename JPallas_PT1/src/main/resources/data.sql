@@ -34,10 +34,10 @@ CREATE TABLE parties(
 
 CREATE TABLE party_members(
 	id INT NOT NULL AUTO_INCREMENT,
-	user INT NOT NULL,
+	userid INT NOT NULL,
 	party INT NOT NULL,
 	PRIMARY KEY (id),
-	CONSTRAINT FK_party_members_user FOREIGN KEY (user) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT FK_party_members_user FOREIGN KEY (userid) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE,
 	CONSTRAINT FK_party_members_party FOREIGN KEY (party) REFERENCES parties(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
@@ -79,22 +79,22 @@ INSERT INTO parties(title, description, game, created_by) VALUES ('We Goin Deep'
 INSERT INTO parties(title, description, game, created_by) VALUES ('Sims and chill', 'Lets talk about our virtual lives!', 5, 4);
 INSERT INTO parties(title, description, game, created_by) VALUES ('Oh god make it stop', 'Please I keep getting bad items oh god help', 3, 9);
 
-INSERT INTO party_members(user, party) VALUES (1, 1);
-INSERT INTO party_members(user, party) VALUES (1, 2);
-INSERT INTO party_members(user, party) VALUES (1, 3);
-INSERT INTO party_members(user, party) VALUES (2, 2);
-INSERT INTO party_members(user, party) VALUES (3, 2);
-INSERT INTO party_members(user, party) VALUES (4, 2);
-INSERT INTO party_members(user, party) VALUES (5, 2);
-INSERT INTO party_members(user, party) VALUES (5, 3);
-INSERT INTO party_members(user, party) VALUES (5, 1);
-INSERT INTO party_members(user, party) VALUES (6, 3);
-INSERT INTO party_members(user, party) VALUES (6, 2);
-INSERT INTO party_members(user, party) VALUES (7, 3);
-INSERT INTO party_members(user, party) VALUES (8, 3);
-INSERT INTO party_members(user, party) VALUES (9, 3);
-INSERT INTO party_members(user, party) VALUES (10, 3);
-INSERT INTO party_members(user, party) VALUES (10, 2);
+INSERT INTO party_members(userid, party) VALUES (1, 1);
+INSERT INTO party_members(userid, party) VALUES (1, 2);
+INSERT INTO party_members(userid, party) VALUES (1, 3);
+INSERT INTO party_members(userid, party) VALUES (2, 2);
+INSERT INTO party_members(userid, party) VALUES (3, 2);
+INSERT INTO party_members(userid, party) VALUES (4, 2);
+INSERT INTO party_members(userid, party) VALUES (5, 2);
+INSERT INTO party_members(userid, party) VALUES (5, 3);
+INSERT INTO party_members(userid, party) VALUES (5, 1);
+INSERT INTO party_members(userid, party) VALUES (6, 3);
+INSERT INTO party_members(userid, party) VALUES (6, 2);
+INSERT INTO party_members(userid, party) VALUES (7, 3);
+INSERT INTO party_members(userid, party) VALUES (8, 3);
+INSERT INTO party_members(userid, party) VALUES (9, 3);
+INSERT INTO party_members(userid, party) VALUES (10, 3);
+INSERT INTO party_members(userid, party) VALUES (10, 2);
 
 INSERT INTO messages(content, sender, party) VALUES ('Holas!', 5, 1);
 INSERT INTO messages(content, sender, party) VALUES ('Como va esto?', 5, 1);

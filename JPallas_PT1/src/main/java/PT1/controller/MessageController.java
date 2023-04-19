@@ -40,6 +40,11 @@ public class MessageController {
 		return messagexID;
 	}
 
+	@GetMapping("/messages/party/{partyId}")
+	public List<Message> listMessagesByPartyId(@PathVariable(name = "partyId") Long partyId) {
+		return messageService.listMessagesByPartyId(partyId);
+	}
+
 	// Post Mappings
 	@PostMapping("/messages")
 	public Message saveMessage(@RequestBody Message message) {

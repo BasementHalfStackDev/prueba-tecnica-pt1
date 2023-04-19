@@ -32,11 +32,6 @@ public class PartyController {
 		return partyService.listParties();
 	}
 
-	@GetMapping("/parties/{gametitle}")
-	public List<Party> listPartiesByGameTitle(@PathVariable(name = "gametitle") String gametitle) {
-		return partyService.listPartiesByGameTitle(gametitle);
-	}
-
 	@GetMapping("/parties/{id}")
 	public Party partyById(@PathVariable(name = "id") Long id) {
 		Party partyxID = new Party();
@@ -44,6 +39,11 @@ public class PartyController {
 		partyxID = partyService.partyById(id);
 
 		return partyxID;
+	}
+
+	@GetMapping("/parties/game/{gameId}")
+	public List<Party> listPartiesByGameId(@PathVariable(name = "gameId") Long gameId) {
+		return partyService.listPartiesByGameId(gameId);
 	}
 
 	// Post Mappings

@@ -21,7 +21,7 @@ public class Party_Member {
 	private Long id;
 
 	@ManyToOne
-	@JoinColumn(name = "user")
+	@JoinColumn(name = "userid")
 	private User user;
 
 	@ManyToOne
