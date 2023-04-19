@@ -18,7 +18,7 @@ CREATE TABLE users(
 	password VARCHAR(30) NOT NULL,
 	email VARCHAR(255) NOT NULL,
 	steam_username VARCHAR(50) DEFAULT NULL,
-	PRIMARY KEY(id)
+	PRIMARY KEY (id)
 );
 
 CREATE TABLE parties(
@@ -27,31 +27,29 @@ CREATE TABLE parties(
 	description VARCHAR(255) DEFAULT NULL,
 	game INT NOT NULL,
 	created_by INT NOT NULL,
-	PRIMARY KEY(id),
+	PRIMARY KEY (id),
 	CONSTRAINT FK_parties_game FOREIGN KEY (game) REFERENCES games(id) ON UPDATE CASCADE ON DELETE CASCADE,
-	CONSTRAINT FK_parties_created_by FOREIGN KEY (created_by) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE
+	CONSTRAINT FK_parties_created_by FOREIGN KEY (created_by) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE party_members(
 	id INT NOT NULL AUTO_INCREMENT,
 	user INT NOT NULL,
 	party INT NOT NULL,
-	PRIMARY KEY(id),
-	CONSTRAINT FK_party_members_user FOREIGN KEY (user) REFERENCES users (id)
-	ON UPDATE CASCADE ON DELETE CASCADE,
-	CONSTRAINT FK_party_members_party FOREIGN KEY (party) REFERENCES parties (id)
-	ON UPDATE CASCADE ON DELETE CASCADE
+	PRIMARY KEY (id),
+	CONSTRAINT FK_party_members_user FOREIGN KEY (user) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT FK_party_members_party FOREIGN KEY (party) REFERENCES parties(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE messages(
 	ID INT NOT NULL AUTO_INCREMENT,
 	content VARCHAR(300) NOT NULL,
-	time_sent DATETIME DEFAULT CURRENT_TIMESTAMP
+	time_sent DATETIME DEFAULT CURRENT_TIMESTAMP,
 	sender INT NOT NULL,
 	party INT NOT NULL,
-	PRIMARY KEY(id),
-	CONSTRAINT FK_messages_sender FOREIGN KEY (sender) REFERENCES users (id),
-	CONSTRAINT FK_messages_party FOREIGN KEY (party) REFERENCES parties (id)
+	PRIMARY KEY (id),
+	CONSTRAINT FK_messages_sender FOREIGN KEY (sender) REFERENCES users(id),
+	CONSTRAINT FK_messages_party FOREIGN KEY (party) REFERENCES parties(id)
 );
 
 INSERT INTO games(title, description, playtime) VALUES ('Deep Rock Galactic', 'A game where you work and mine with your fellow dwarves', 100);
@@ -101,21 +99,3 @@ INSERT INTO party_members(user, party) VALUES (10, 2);
 INSERT INTO messages(content, sender, party) VALUES ('Holas!', 5, 1);
 INSERT INTO messages(content, sender, party) VALUES ('Como va esto?', 5, 1);
 INSERT INTO messages(content, sender, party) VALUES ('Todo bien?', 5, 1);
-INSERT INTO messages(content, sender, party) VALUES ('Si!', 1, 1);
-INSERT INTO messages(content, sender, party) VALUES ('Gracias!', 1, 1);
-
-INSERT INTO messages(content, sender, party) VALUES ('Como va vuestra familia en los sims?', 2, 2);
-INSERT INTO messages(content, sender, party) VALUES ('Mi perro murio :(', 3, 2);
-INSERT INTO messages(content, sender, party) VALUES ('Mi sim ha tenido una hija!', 4, 2);
-INSERT INTO messages(content, sender, party) VALUES ('He sido negligente y los servicios sociales se llevan a mi hijo, oh no', 5, 2);
-INSERT INTO messages(content, sender, party) VALUES ('Vendo Opel Astra en perfectas condiciones excepto el aire acondicionado que-', 10, 2);
-INSERT INTO messages(content, sender, party) VALUES ('Alguien se echa un fortnite?', 6, 2);
-
-INSERT INTO messages(content, sender, party) VALUES ('Hay alguien ahi?', 8, 3);
-INSERT INTO messages(content, sender, party) VALUES ('No.', 9, 3);
-
-
-
-
-
-
