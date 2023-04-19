@@ -7,6 +7,9 @@ Se crea una API para una aplicación LFG donde los usuarios pueden crear e unirs
 
 - Games: Se guarda toda la información de los juegos. Endpoints para poder ver todos los juegos o buscar por id, crear, borrar y modificar los juegos actuales.
 
+## Endpoints
+
+
 - Users: Se guarda información de nombre de usuario, contraseña, email, usuario de steam... Endpoints para listar/buscar por id, crear, borrar y modificar usuarios.
 
 - Parties: Se guarda información referente las parties: El titulo, descripcion, juego y el usuario creador. Endpoints para listar todas, listar por id de juego, buscar por id de party, crear, borrar y modificar parties
